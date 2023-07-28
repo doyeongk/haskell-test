@@ -9,6 +9,11 @@ paths m n
     | n == 1 = 1
     | otherwise = paths(m-1)n + paths m(n-1)
 
+curry2 :: ((α, β) -> γ) -> α -> β -> γ
+curry2 f x y = f (x, y)
+
+uncurry2 :: (α -> β -> γ) -> (α, β) -> γ
+uncurry2 f (x, y) = f x y
 
 
 main :: IO ()
