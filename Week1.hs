@@ -15,6 +15,8 @@ curry2 f x y = f (x, y)
 uncurry2 :: (α -> β -> γ) -> (α, β) -> γ
 uncurry2 f (x, y) = f x y
 
+-- TODO: implement a2r :: Integer -> String
+
 
 main :: IO ()
 main = do
